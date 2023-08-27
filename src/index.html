@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Twitter</title>
+</head>
+<body>
+    <div class="container">
+        <button> Register </button>
+        <div class="modal">
+            <div class="modal-content">
+                <form action="/auth/register" method="POST">
+                    <div class="mb-3">
+                        <label for="name-reg" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name-reg" name="name">                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="email-reg" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email-reg" name="email">                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="email-reg" class="form-label">handle</label>
+                        <input type="text" class="form-control" id="email-reg" name="email">                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="password-reg" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password-reg" name="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password-conf-reg" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="password-conf-reg" name="password-confirm">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <button> Login </button>
+    </div>
+    <div class="container">
+        <h1>Create Tweet</h1>
+    
+        <form action="http://localhost:3000/sendTweet" method="POST">
+            <div class="form-group">
+                <input class="form-control" name="message">
+            </div>
+    
+            <div class="form-group">
+                <label for="Title">Communities</label>
+                <input class="form-control" name="communities">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
